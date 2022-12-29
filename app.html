@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="app_navbar">
+        <img src="assets/media/logo2.svg" alt="logo" class="logo">
+        <div class="search_bar_container">
+            <input type="text" name="search_bar" id="searchBar" placeholder="Quick find...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button id="createListButton"><i class="fa-solid fa-plus"></i></button>
+    </nav>
+    
+    
+    <main id="app_main">
+    <div class="side_nav padding-2">
+    
+        <!-- SideNav -->
+        
+        <h4 class="side_nav_title mb-10 mt-10">My Lists</h4>
+        <ul class="lists_container">
+            
+        </ul>
+
+    </div>
+
+    <!-- Main area wrapper -->
+   
+    <div class='center_area_wrapper'>
+        <h2 class='message'>Click on a list to show tasks</h2>   
+    </div>
+    </main>
+    
+
+    <!-- Add new list popup -->
+
+    <div class="add_new_list_popup">
+        <form action="" method="GET" id="add_list_form">
+        <button id="close_add_list_popup"><i class="fa-solid fa-xmark"></i></button>
+        <h3>Add new list</h3>
+        <input type="text" placeholder="List title" name="list_name" required>
+        <div class="list_colors_container">
+            <input type="radio" id="color1" name="list_color" value="#ED7A7A">
+            <label for="color1"></label>
+
+            <input type="radio" id="color2" name="list_color" value="#69CB8A">
+            <label for="color2"></label>
+
+            <input type="radio" id="color3" name="list_color" value="#8FB2F6">
+            <label for="color3"></label>
+
+            <input type="radio" id="color4" name="list_color" value="#FFBABA">
+            <label for="color4"></label>
+
+            <input type="radio" id="color5" name="list_color" value="#FAD07F">
+            <label for="color5"></label>
+
+            <input type="radio" id="color6" name="list_color" value="#F2F7A1">
+            <label for="color6"></label>
+        </div>
+        <p class="error_message_container mb-20"></p>
+        <button id="save_list_btn" type="submit">Save</button>
+        </form>
+    </div>
+
+
+    <!-- Add task popup -->
+
+    <div class="add_new_task_popup">
+        <form action="" method="GET" id="add_task_form">
+        <button id="close_add_task_popup"><i class="fa-solid fa-xmark"></i></button>
+        <h3>Add new task</h3>
+        <input type="text" placeholder="Task title" name="task_title" required>
+        <p class="error_message_container mb-20"></p>
+        <button id="save_task_btn" type="submit">Save</button>
+        </form>
+    </div>
+
+    <div class="overlay"></div>
+    <script src="js/list_management.js"></script>
+    <script src="js/task_management.js"></script>
+</body>
+</html>
